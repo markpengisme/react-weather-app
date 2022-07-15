@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+/*eslint semi: ["error", "never"]*/
+import "./App.css"
+import Search from "./components/search/search"
 
 function App() {
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Search onSearchChange={handleOnSearchChange}></Search>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
